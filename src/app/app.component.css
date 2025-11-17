@@ -1,0 +1,363 @@
+/* --- Configurações Globais --- */
+
+*{ 
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0; 
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: #2e2e2e; 
+    color: #FFFFFF; 
+}
+
+/* Define a largura máxima do conteúdo, para ser usado dentro das seções */
+.container {
+    width: 95%; 
+    max-width: 900px; 
+    margin: 0 auto; /* Centraliza o container */
+}
+
+/* --- Cabeçalho / Navbar --- */
+
+header{
+    background: #2e2e2e;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 12px 20px ;
+    color: #e0dccc;
+}
+
+.logo img{
+    height: 70px;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #e0dccc;
+    text-decoration: none;
+    margin: 0 15px;
+    /* Usa a fonte importada (Playfair Display) para consistência */
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+}
+
+nav a:hover{
+    color: #CFAF6D; 
+}
+
+.nav-icons{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-icons a{
+    color: #e0dccc;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-icons a:hover{
+    color: #CFAF6D;
+}
+
+
+/* --- Seções Principais (Home) --- */
+
+section{
+    padding: 20px 0; 
+}
+
+/* Seção "Início" (box com texto e imagem da calça) */
+.box-inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.bloco-texto-inicio{
+    max-width: 500px;
+}
+
+.bloco-texto-inicio h2{
+    font-family:"Playfair Display", serif; 
+    font-size: 4.5rem;
+    margin-bottom: 5%; 
+    text-align: left;
+}
+
+/* Estiliza o parágrafo de introdução com itálico */
+.bloco-texto-inicio p {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #e0dccc; 
+}
+
+.imagem-inicio{
+    width: 280px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* --- Seção Novidades --- */
+
+.novidades{
+    background: #e0dccc; 
+    color: #2e2e2e; 
+    padding: 80px 0; 
+    text-align: center; 
+    /* O background ocupa 100% da largura pois este container está fora do .container */
+}
+
+.novidades h1{
+    /* Mantém a consistência da fonte de título (Playfair Display) */
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.produtos-container{
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    flex-wrap: wrap; 
+}
+
+.caixa-nov {
+    background-color: rgba(99, 99, 99, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+    
+    /* Alinhamento interno da caixa (imagem e botão) */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: space-between; 
+    min-height: 300px; /* Garante que todas as caixas tenham a mesma altura */
+}
+
+/* Regra genérica para todas as imagens de produto, removendo a necessidade de IDs */
+.caixa-nov img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain; /* Garante que a imagem caiba sem distorcer */
+}
+.btn-vermais{
+    background-color: #d1b48c;
+    color: #333;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+
+/* Estiliza o link <a> com classe .btn para parecer um botão */
+.caixa-nov .btn {
+    background-color: #d1b48c; 
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer; 
+    font-size: 1em;
+    color: #333; 
+    text-decoration: none; 
+    transition: background-color 0.3s ease; 
+}
+
+.caixa-nov .btn:hover {
+    background-color: #c0a070; 
+}
+
+
+/* --- Estilos da Página de Login --- */
+
+.longin-container {
+    background-color: #ffefdb;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;     
+    /* Garante que o container ocupe o espaço *abaixo* do header (100vh - altura aprox. do header) */
+    min-height: calc(100vh - 100px);
+    padding: 20px; 
+}
+
+/* Caixa principal do formulário de login */
+.login-box {
+    color: #2e2e2e;
+    width: 100%; 
+    max-width: 450px; 
+    text-align: center; 
+}
+
+/* Títulos da caixa de login */
+.login-box h1 {
+    font-family: Arial, Helvetica, sans-serif; 
+    text-transform: uppercase; /* Conforme referência da imagem */
+    font-size: 1.5rem; 
+    font-weight: 600; 
+    margin-bottom: 10px; 
+}
+
+.login-box p {
+    font-size: 1rem; 
+    color: #555; 
+    margin-bottom: 30px; 
+}
+
+/* Estilização dos campos de input (E-mail, Senha) */
+.input-group {
+    margin-bottom: 15px; 
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%; 
+    padding: 15px; 
+    border: none; 
+    background-color: #EFEFEF; /* Fundo cinza claro, conforme referência */
+    border-radius: 5px; 
+    font-size: 1rem; 
+}
+
+/* Estiliza o texto "E-mail", "Senha" dentro dos inputs */
+::placeholder {
+    color: #999; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Alinhamento do checkbox "Manter Login" */
+.checkbox-group {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    margin-bottom: 25px;
+    font-size: 0.9rem; 
+    color: #555;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px; 
+}
+
+/* Botão principal de submit do formulário */
+.bnt-submit {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    /* Usa a cor dourada principal do site para consistência */
+    background-color: #d1b48c; 
+    color: #333; 
+
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.bnt-submit:hover {
+    background-color: #c0a070; 
+}
+
+/* Link "Criar conta" na base do formulário */
+.cadastro-link {
+    margin-top: 30px; 
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.cadastro-link a {
+    color: #2e2e2e; 
+    font-weight: bold;
+    text-decoration: none; 
+    text-transform: uppercase; 
+}
+
+.cadastro-link a:hover {
+    text-decoration: underline; 
+}
+
+
+/* --- Página de Novo Cadastro --- */
+
+.cadastro{
+    background-color: #ffefdb;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: calc(100vh - 100px);
+    padding: 20px;
+}
+
+.cadastro-box{
+    color: #2e2e2e;
+    width: 100%; 
+    max-width: 450px; 
+    text-align: center;
+}
+
+
+
+.img-sobre{
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sobre-texto{
+    flex: 1;
+    text-align: left;
+    margin-right: 15%;
+}
+
+
+.container-sobre{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.produtos-novi {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 80px 0; 
+    text-align: center;
+    gap: 30px;
+}
+
+.fiorentina, .cotele {
+    background-color: rgba(99, 99, 99, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: space-between; 
+    min-height: 350px; 
+}
+

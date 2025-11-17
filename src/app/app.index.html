@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="/src/app/app.component.css">
+    <title>Galeria Seleta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class ="navbar" >
+        <div class = "logo">
+            <img src = "/src/app/img/LogoGS.png" alt = "Galeria Seleta">
+        </div>
+
+        <nav class = "nav-links">
+            <ul>
+                <li><a href = "#inicio">Início</a></li> 
+                <li><a href = "#novidades">Novidades</a></li>
+                <li><a href = "/src/app/app.produtos.html">Produtos</a></li> 
+                <li><a href = "/src/app/app.sobre.html">Sobre</a></li> 
+                <li><a href = "#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-icons">
+         <a href="#" aria-label="Carrinho de compras">
+             <i class="fa-solid fa-cart-shopping"></i> </a>
+         <a href="/src/app/app.login.html" aria-label="Perfil do usuário">
+             <i class="fa-solid fa-user"></i> </a>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id = "inicio">
+            <div class="container">
+                <div class = "box-inicio">
+                    <div class = "bloco-texto-inicio">
+                        <h2>Encontre peças únicas</h2>
+                        <p>Descubra tesouro vintage e <b>peças exclusivas</b></p>
+                    </div>
+                    <img src="/src/app/img/calca.png.webp" alt="Calça" class="imagem-inicio">
+                </div>
+            </div>
+        </section>
+
+        <section id = "novidades" class="novidades">
+            <div class="container">
+                <h1>Novidades</h1>
+
+                <div class = "produtos-container">
+                    
+                    <div class = "caixa-nov">
+                        <img src="/src/app/img/camisetaNov.png" alt = "Produto1">
+                        <a class = "btn" href = "#">Compre agora</a>
+                    </div>
+
+                    <div class = "caixa-nov">
+                        <img src = "/src/app/img/Force1.png" alt = "Produto2">
+                        <a class="btn" href = "#">Compre agora</a>
+                    </div>
+
+                    <div class = "caixa-nov">
+                        <img src = "/src/app/img/moletom.png" alt = "Produto3">
+                        <a class="btn" href = "#">Compre agora</a>
+                    </div>
+                    <a class="btn-vermais" href="/src/app/app.sobre.html">Veja mais</a>
+                </div>
+                
+            </div>
+        
+     </section>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo cadastro cliente</title>
+    <link rel="stylesheet" href="/src/app/app.component.css">
+</head>
+<body>
+    <!--Importando a logo da marca-->
+    <header class ="navbar" >
+        <div class = "logo">
+            <img src = "/src/app/img/LogoGS.png" alt = "Galeria Seleta">
+        </div>
+
+    <!--Criando as divisões do cabeçalho-->
+            
+            <nav class = "nav-links">
+               <ul>
+               <li><a href = "/src/app/app.index.html">Início</a></li> 
+               <li><a href = "#novidades">Novidades</a></li> 
+               <li><a href="/src/app/app.produtos.html">produtos</a></li>
+               <li><a href = "/src/app/app.sobre.html">Sobre</a></li> 
+               <li><a href = "#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!--ICONES DE CARRINHO DE COMPRA, USUÁRIO E HAMBURGUER-->
+       <div class="nav-icons">
+        <a href="#" aria-label="Carrinho de compras">
+            <i class="fa-solid fa-cart-shopping"></i> </a>
+        <a href="/src/app/app.login.html" aria-label="Perfil do usuário">
+            <i class="fa-solid fa-user"></i></a>
+    </div>
+    </header>
+
+    <main class="cadastro">
+        <div class="cadastro-box">
+
+            <h1>Crie sua conta</h1>
+            <p>Compre mais rápido e acompanhe seus pedidos em um só lugar!</p>
+        
+            <form class="form" action="#" method="post" autocomplete="on">
+
+            <div class="forms-field">
+            
+                <div class = "input-group">
+                <label for ="nome"></label>
+                <input id="nome" name="nome" type="text" placeholder="Nome *" required>
+                </div>
+
+                <div class = "input-group">
+                    <label for="sobrenome"></label>
+                    <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome *" required>
+                </div>
+
+                <div class = "input-group">
+                    <label for="cpf"></label>
+                    <input type="text" name="cpf" id="cpf" placeholder="CPF (opcional)">
+                </div>
+
+                <div class = "input-group">
+                    <label for = "telefone"></label>
+                    <input id="telefone" name="telefone" type="text" placeholder="Telefone *" required>
+                </div>
+
+                <div class = "input-group">
+                    <label for = "email"></label>
+                    <input id="email" name="E-mail" type="text" placeholder="E-mail *" required>
+                </div>
+
+                <div class = "input-group">
+                    <label for="senha"></label>
+                    <input id="senha" name="senha" type="password" minlength="20" placeholder="Senha *" required>
+                </div>
+
+                    <button type="submit" class="bnt-submit" href = "#">Criar conta</button>
+                </form>
+            </div>
+        </main>
+</body>
+</html>

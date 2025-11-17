@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Galeria Seleta</title>
+    <link rel="stylesheet" href="/src/app/app.component.css">
+    <!--Importado fonte-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+    <header class="navbar"> 
+        <div class="logo">
+            <img src="/src/app/img/LogoGS.png" alt="logo">
+        </div>
+
+        <nav class = "nav-links">
+               <ul>
+               <li><a href = "/src/app/app.index.html">Início</a></li> 
+               <li><a href = "#novidades">Novidades</a></li>
+               <li><a href = "/src/app/app.produtos.html">Produtos</a></li> 
+               <li><a href = "/src/app/app.sobre.html">Sobre</a></li> 
+               <li><a href = "#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+       <!--ICONES DE CARRINHO DE COMPRA E USUÁRIO-->
+       <div class="nav-icons">
+        <a href="#" aria-label="Carrinho de compras">
+            <i class="fa-solid fa-cart-shopping"></i></a>
+
+        <a href="/src/app/app.login.html" aria-label="Perfil do usuário">
+
+            <i class="fa-solid fa-user"></i></a>
+    </div> 
+    </header>
+
+    <main class="longin-container">
+        <div class="login-box">
+
+            <h1>Bem vindo de volta</h1>
+            <p>Entre em sua conta</p>
+
+            <form class="form" action="#" method="post" autocomplete="on">
+
+                <div class="form-fields">
+                    
+                    <div class="input-group">
+                        <label for="email"></label>
+                        <input type="text" name="email" id="email" placeholder="E-mail" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="senha"></label>
+                        <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label for="manter">Manter Login</label>
+                        <input type="checkbox" name="manterLogin" id="manter">
+                    </div>
+
+                </div>
+
+                <button type="submit" class="bnt-submit">Entrar</button>
+                
+            </form>
+
+                <p class="cadastro-link">Ainda não possui conta? <a href="/src/app/app.novoCadastro.html">Criar conta</a></p>
+        </div>
+    </main>
+
+</body>
+</html>
