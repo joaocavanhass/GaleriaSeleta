@@ -30,18 +30,33 @@
         </div>
     </header>
     <main>
-        <section>
-            <div class="produtos-novi">
-                <div class="fiorentina"> 
-                    <img src="/src/app/img/fiorentina.png" alt="camiseta fiorentina retrô">
-                    <h2>Camiseta Fiorentina Retrô (1997-1998)</h2>
-                </div>
-                <div class="cotele">
-                    <img src="/src/app/img/cotele.png" alt="calça cotele">
-                    <h2>Calça de veludo cotelê Timberland</h2>
-                </div>
+        <main>
+    <section id="area-admin" style="background-color: #f4f4f4; padding: 20px; margin-bottom: 40px; border-bottom: 2px solid #ccc;">
+        <h2 style="text-align: center; color: #333;">Cadastrar Novo Produto</h2>
+        
+        <form id="formProduto" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
+            
+            <input type="text" id="prodNome" placeholder="Nome do Produto" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            
+            <input type="text" id="prodImg" placeholder="URL da Imagem (ex: https://site.com/foto.jpg)" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            
+            <input type="number" id="prodPreco" placeholder="Preço (ex: 99.90)" step="0.01" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            
+            <button type="submit" style="background-color: #28a745; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                Salvar Produto
+            </button>
+        </form>
+    </section>
+
+    <section>
+        <h1 style="text-align: center; color: white; margin-bottom: 20px;">Nossa Coleção</h1>
+        
+        <div class="produtos-novi" id="lista-produtos">
             </div>
-        </section>
-    </main>
+    </section>
+</main>
+
+<script src="/src/app/produto.js"></script>
+        
 </body>
 </html>

@@ -40,7 +40,7 @@
             <h1>Crie sua conta</h1>
             <p>Compre mais rápido e acompanhe seus pedidos em um só lugar!</p>
         
-            <form class="form" action="#" method="post" autocomplete="on">
+            <form class="form" id="formCadastro" action="#" method="post" autocomplete="on">
 
             <div class="forms-field">
             
@@ -71,12 +71,14 @@
 
                 <div class = "input-group">
                     <label for="senha"></label>
-                    <input id="senha" name="senha" type="password" minlength="20" placeholder="Senha *" required>
+                    <input id="senha" name="senha" type="password" minlength="8" placeholder="Senha *" required>
                 </div>
 
                     <button type="submit" class="bnt-submit" href = "#">Criar conta</button>
                 </form>
             </div>
         </main>
+
+        <script src="/src/app/cadastro.js"></script>
 </body>
 </html>

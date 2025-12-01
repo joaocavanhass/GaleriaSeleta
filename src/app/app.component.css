@@ -339,25 +339,51 @@ section{
 }
 
 .produtos-novi {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 80px 0; 
-    text-align: center;
-    gap: 30px;
+    display: flex; /* Ativa o layout flexível */
+    justify-content: center; /* Centraliza os cartões na tela horizontalmente */
+    flex-wrap: wrap; /* Se faltar espaço, joga o produto para a linha de baixo */
+    gap: 30px; /* Espaço entre os cartões */
+    padding: 80px 20px; /* Espaçamento interno (topo/baixo e laterais) */
+    max-width: 1200px; /* Limita a largura máxima para não esticar demais em telas gigantes */
+    margin: 0 auto; /* Centraliza o container na página */
 }
 
-.fiorentina, .cotele {
+/* Estilo genérico para QUALQUER produto (substitui usar .fiorentina, .cotele) */
+.card-produto {
     background-color: rgba(99, 99, 99, 0.8);
     border-radius: 15px;
     padding: 20px;
-    width: 200px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
-
+    width: 250px; /* Aumentei um pouco para caber melhor o título */
+    min-height: 350px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    justify-content: space-between; 
-    min-height: 350px; 
+    flex-direction: column; /* Coloca imagem em cima e texto embaixo */
+    align-items: center; /* Centraliza tudo horizontalmente dentro do cartão */
+    justify-content: flex-start; /* Começa do topo */
+    transition: transform 0.3s ease; /* Animação suave para o hover */
+}
+
+/* Efeito legal: Quando passar o mouse, o cartão sobe um pouco */
+.card-produto:hover {
+    transform: translateY(-5px);
+}
+
+/* CONTROLE DE IMAGEM (Muito Importante!) */
+/* Isso impede que uma imagem gigante quebre seu layout */
+.card-produto img {
+    width: 100%; /* A imagem ocupa 100% da largura do cartão */
+    height: 200px; /* Define uma altura fixa para todas ficarem iguais */
+    object-fit: contain; /* Garante que a imagem apareça inteira sem cortar ou esticar */
+    margin-bottom: 15px; /* Espaço entre a imagem e o título */
+    border-radius: 10px;
+}
+
+/* Melhorando a tipografia do título */
+.card-produto h2 {
+    font-size: 1.2rem; /* Tamanho da fonte mais equilibrado */
+    color: #fff; /* Texto branco para dar contraste com o fundo cinza */
+    text-align: center;
+    font-weight: 500;
 }
 
